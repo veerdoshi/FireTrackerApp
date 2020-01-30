@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="AFm-WQ-2Il">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="54x-5c-04q" customClass="LoginViewController" customModule="firetracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8S3-2R-FK4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-dc-Otr">
+                                <rect key="frame" x="125" y="207" width="165" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="37"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.66274509800000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coF-Eo-5Nx">
+                                <rect key="frame" x="123" y="378" width="170" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="confirmicon"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="54x-5c-04q" eventType="touchUpInside" id="4bd-bs-THb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flames" translatesAutoresizingMaskIntoConstraints="NO" id="Ef0-Hl-50H">
+                                <rect key="frame" x="134" y="71" width="145" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-kS-RiD">
+                                <rect key="frame" x="175" y="320" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Contacts"/>
+                                <connections>
+                                    <action selector="contactButtonPressed:" destination="54x-5c-04q" eventType="touchUpInside" id="RUC-XX-hTh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DPc-mg-TJw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PNY-a7-4Ih"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfS-Ad-b54" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.21739130434787" y="538.85869565217399"/>
+        </scene>
+        <!--FireTracker-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FireViewController" id="BYZ-38-t0r" customClass="FireViewController" customModule="firetracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9Z-Qi-NvM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </mapView>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="cmL-ag-uD8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Firetracker" prompt=" " largeTitleDisplayMode="never" id="CKY-fJ-d3W">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="nlG-i5-DH9">
+                                            <connections>
+                                                <action selector="refreshButton:" destination="BYZ-38-t0r" id="aQ1-Ya-UcK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem image="CurrentLocation" id="lTU-NJ-Whb">
+                                                <connections>
+                                                    <action selector="zoomToUserLocation:" destination="BYZ-38-t0r" id="86s-Dc-AL5"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="add" id="RmH-jc-0I1">
+                                                <connections>
+                                                    <action selector="addFriendContact:" destination="BYZ-38-t0r" id="01T-52-PGQ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cmL-ag-uD8" secondAttribute="trailing" id="DkE-DM-0zx"/>
+                            <constraint firstItem="N9Z-Qi-NvM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ku4-ga-WLp"/>
+                            <constraint firstItem="N9Z-Qi-NvM" firstAttribute="leading" secondItem="cmL-ag-uD8" secondAttribute="leading" id="PGI-uJ-laE"/>
+                            <constraint firstItem="N9Z-Qi-NvM" firstAttribute="trailing" secondItem="cmL-ag-uD8" secondAttribute="trailing" id="Wtd-g5-or2"/>
+                            <constraint firstItem="cmL-ag-uD8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eW3-5b-AKm"/>
+                            <constraint firstItem="cmL-ag-uD8" firstAttribute="top" secondItem="N9Z-Qi-NvM" secondAttribute="top" id="hDt-oJ-ZFo"/>
+                            <constraint firstItem="cmL-ag-uD8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ySG-GJ-2qy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FireTracker" id="EjL-d2-IBv">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="cEd-PA-AvJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="5pX-ZK-uVf"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="N9Z-Qi-NvM" id="9vQ-am-xNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="543"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CurrentLocation" width="15" height="15"/>
+        <image name="confirmicon" width="128" height="128"/>
+        <image name="flames" width="1000" height="1010"/>
+    </resources>
+</document>
